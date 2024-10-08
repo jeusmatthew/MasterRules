@@ -61,11 +61,27 @@ public class CafeteriaMenu {
     }
     
     public void addCombo(Combo combo){
-        //falta integrarlo al menu
+        for (Combo existingCombo : combos) {
+            if (existingCombo.getComboName().equalsIgnoreCase(combo.getComboName())) {
+                System.out.println("ERROR: El combo con el nombre '" + combo.getComboName() + "' ya existe en el menú.");
+                return;
+            }
+        }
+        
+        combos.add(combo);
+        System.out.println("Combo '" + combo.getComboName() + "' agregado al menú exitosamente.");
+        
     }
     
     public void removeCombo(String comboName){
-        //falta integrarlo al menu
+        for (int i = 0; i < combos.size(); i++) {
+            if (combos.get(i).getComboName().equalsIgnoreCase(comboName)) {
+                combos.remove(i);
+                System.out.println("Combo '" + comboName + "' eliminado del menú exitosamente.");
+                return;
+            }
+        }
+        System.out.println("ERROR: Combo '" + comboName + "' no encontrado en el menú.");
     }
 
     public String getTitle() {

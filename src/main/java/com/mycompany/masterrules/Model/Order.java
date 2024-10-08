@@ -1,15 +1,15 @@
 package com.mycompany.masterrules.Model;
-import java.util.List;
 
+import java.util.List;
 
 public class Order {
 
-    private CustomerAccount customer;
+    private CustomerAccount customer; //falta la implementacion de la clase CustomerAccount
     private List<Product> products;
-    private List<Combo combos;
+    private List<Combo> combos;
     private String comment;
     private String deliveryMethod;
-    private String Fecha
+    private String Fecha;
 
     public void addProduct(Product product) {
         products.add(product);
@@ -35,9 +35,13 @@ public class Order {
         this.deliveryMethod = deliveryMethod;
     }
 
+    // Tipo de dato fecha por definir
+
     public void setFecha(String Fecha) {
         this.Fecha = Fecha;
     }
+
+    // implementar el metodo de la clase CustomerAccount
 
     public CustomerAccount getCustomer() {
         return customer;
@@ -63,6 +67,8 @@ public class Order {
         return Fecha;
     }
 
+    // implementar el metodo de la clase CustomerAccount
+
     public void setCustomer(CustomerAccount customer) {
         this.customer = customer;
     }
@@ -75,14 +81,10 @@ public class Order {
         this.combos = combos;
     }
 
+    // tipo de dato fecha por definir
+    
     public void setFecha(String Fecha) {
         this.Fecha = Fecha;
     }
 
-
-
-
-
-
 }
-

@@ -1,19 +1,20 @@
 package com.mycompany.masterrules.Model;
+
 import java.util.HashMap;
 
 
 public class ComboTemplate {
-    private HashMap<ProductType, quantity> comboRequirements;
+    private HashMap<String, Integer> comboRequirements;
 
-    public void setComboRequirements(HashMap<ProductType, quantity> comboRequirements) {
+    public void setComboRequirements(HashMap<String, Integer> comboRequirements) {
         this.comboRequirements = comboRequirements;
     }
 
-    public HashMap<ProductType, quantity> getComboRequirements() {
+    public HashMap<String, Integer> getComboRequirements() {
         return comboRequirements;
     }
 
-    public boolean verifyCombo(Order order) {
-        
+    // implementar el metodo para verificar si el combo es valido
+    public boolean verifyCombo(Order order) {      
     }
 }
